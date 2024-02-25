@@ -1,5 +1,5 @@
 // let number = Math.ceil(Math.random() * 20);
-var number = Math.ceil(Math.random() * 20)
+var number = Math.ceil(Math.random() * 21)
 console.log(number);
 let highScore = 0;
 let gameScore = Number(document.querySelector('span.score').innerHTML);
@@ -30,7 +30,7 @@ document.querySelector('button.btn.check').addEventListener(
 
 document.querySelector('button').addEventListener(
     "click", () => {
-        number = Math.ceil(Math.random() * 20);
+        number = Math.ceil(Math.random() * 21);
         console.log(number);
         gameScore = 20;
         document.querySelector('div[name = number]').innerHTML = '?';
