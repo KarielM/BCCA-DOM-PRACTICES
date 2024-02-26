@@ -1,6 +1,4 @@
-let variable = document.querySelectorAll(".checkbox_div");
-
-variable.forEach (i => {
+document.querySelectorAll(".checkbox_div").forEach ((i) => {
     i.addEventListener("change", () => {
         i.style.backgroundColor = (i.style.backgroundColor !== "black") ? "black" : "initial";
     //     if (i.style.backgroundColor !== "black"){
