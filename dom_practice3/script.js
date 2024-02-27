@@ -1,6 +1,6 @@
 document.getElementById('show-window').addEventListener("click", () => {
     // console.log(document.querySelector('.window hidden'));
-    document.querySelector('.window').classList.remove('hidden');
+    document.querySelector('.window').classList.toggle('hidden');
 
 })
 

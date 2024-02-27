@@ -58,8 +58,9 @@ document.querySelector('button.btn.check').addEventListener(
     "click", () => {
         console.log(number);
         let guess = document.querySelector('input.guess').value;
+        attempts++
         if (guess == number){
-            highScore = (attempts + 1 <= 20) ? attempts += 1 : 20;
+            let highScore = (attempts <= 20) ? attempts : 20;
             document.querySelector('span.score').innerHTML = (gameScore != 0) ? gameScore -= 1 : 0;
             document.getElementById('message').innerHTML = "You are correct!"
             document.querySelector('div[name = number]').innerHTML = `${number}`;
@@ -76,7 +77,7 @@ document.querySelector('button.btn.check').addEventListener(
             // `Highscore: ${highScore}` : `Highscore: ${newHighScore}`;
         }
         else {
-            attempts++
+            // attempts++
             // console.log(attempts)
             // gameScore = (gameScore > 0) ? gameScore-= 1 : 0;
             document.querySelector('span.score').innerHTML = (gameScore != 0) ? gameScore -= 1 : 0;
@@ -90,9 +91,9 @@ document.querySelector('button.btn.check').addEventListener(
 
 document.querySelector('button').addEventListener(
     "click", () => {
-        attempts = 0
-        newHighScore = (highScore !== undefined) ? attempts: undefined;
-        console.log(attempts)
+        attempts = 0;
+        newHighScore = /*(highScore !== undefined) ? attempts: */undefined;
+        // console.log(attempts)
         // console.log(highScore)
         // newHighScore = (highScore < attempts) ? attempts = 0 : highScore;
         number = Math.ceil(Math.random() * 20);
@@ -103,7 +104,7 @@ document.querySelector('button').addEventListener(
         document.querySelector('span.score').innerHTML = "20";
         document.querySelector('div.game').style.backgroundColor = "initial";
     })
-
+// console.log(newHighScore);
 // var currNumber = Math.floor(Math.random(1) * 21);
 // console.log(currNumber)
 // var guess = document.querySelector('.guess');
